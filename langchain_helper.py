@@ -33,7 +33,7 @@ def get_few_shot_db_chain():
 
     llm = HuggingFaceHub(
         repo_id="tiiuae/falcon-7b-instruct",  # or other suitable models
-        huggingfacehub_api_token="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",  # free token from HuggingFace
+        huggingfacehub_api_token=os.environ["HUGGING_FACE_TOKEN"],  # free token from HuggingFace
         model_kwargs={"temperature": 0.1}
     )
 
